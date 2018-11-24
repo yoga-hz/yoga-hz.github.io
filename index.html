@@ -9,39 +9,30 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 </head>
 <body>
-	<section class="hero is-primary is-fullheight is-bold">
+	<section class="hero is-dark is-fullheight">
 		<div class="hero-head">
-			<nav class="navbar">
-				<div class="container">
-					<div class="navbar-brand">
-						<span class="navbar-burger burger" data-target="navbarMenuHeroA">
-							<span></span>
-							<span></span>
-							<span></span>
+			<nav class="navbar is-transparent">
+				<a role="button" class="navbar-burger" data-target="mobileMenu" aria-label="menu" aria-expanded="false">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+				<div id="mobileMenu" class="navbar-menu">
+					<div class="navbar-end">
+						<a class="navbar-item is-active">
+							Home
+						</a>
+						<a class="navbar-item" href="https://github.com/yoga-hz?tab=repositories">
+							Repositories
+						</a>
+						<span class="navbar-item">
+							<a class="button is-link is-inverted" href="https://github.com/yoga-hz/">
+								<span class="icon">
+									<i class="fab fa-github"></i>
+								</span>
+								<span>My GitHub</span>
+							</a>
 						</span>
-					</div>
-					<div id="navbarMenuHeroA" class="navbar-menu">
-						<div class="navbar-left">
-							<h1 class="title">
-								yoga-hz
-							</h1>
-						</div>
-						<div class="navbar-end">
-							<a class="navbar-item is-active">
-								Home
-							</a>
-							<a class="navbar-item" href="https://github.com/yoga-hz?tab=repositories">
-								Repositories
-							</a>
-							<span class="navbar-item">
-								<a class="button is-primary is-inverted" href="https://github.com/yoga-hz/">
-									<span class="icon">
-										<i class="fab fa-github"></i>
-									</span>
-									<span>My GitHub</span>
-								</a>
-							</span>
-						</div>
 					</div>
 				</div>
 			</nav>
@@ -50,8 +41,22 @@
 			<div class="container has-text-centered" style="font-family: monospace;">
 				<h1 class="title">Hi there</h1>
 				<h2 class="subtitle">My name is Yoga</h2>
+				Check out my GitHub here <br>
+				<a class="button is-link is-inverted" href="https://github.com/yoga-hz/">
+					<span class="icon">
+						<i class="fab fa-github"></i>
+					</span>
+					<span>My GitHub</span>
+				</a>
 			</div>
 		</div>
 	</section>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js'></script>
+	<script>
+		$('.navbar-burger').click(function(){
+			$('.navbar-burger').toggleClass('is-active');
+			$('.navbar-menu').toggleClass('is-active');
+		});
+	</script>
 </body>
 </html>
